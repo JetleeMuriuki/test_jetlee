@@ -1,0 +1,19 @@
+<?php
+
+if(isset($_POST["submit"]))
+{
+	
+	$user = $_POST["user"];
+	$password = $_POST["password"];
+
+
+	include "../classes/dbh.php";
+	include "../classes/signup.php";
+	include "../classes/signupcontroller.php;
+	$login = new LoginController($user, $password, $email);
+
+	$login->loginUser();
+
+	header("location: ../index.php?error=none");
+
+}
