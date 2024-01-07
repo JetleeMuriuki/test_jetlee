@@ -23,7 +23,7 @@ class Signup
             return "Email is already registered. Please use a different email.";
         }
 
-        // Generate a unique user ID
+        // Generate a unique customer ID
         $userId = uniqid();
 
         // Hash the password
