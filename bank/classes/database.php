@@ -42,8 +42,12 @@ class Database
     $statement = $this->query($sql, $params);
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
-     public function close() {
-    $this->connection = null;
+    public function getConnection() {
+        return $this->connection;
+    }
+
+    public function close() {
+        $this->connection = null;
     }
 }
 
