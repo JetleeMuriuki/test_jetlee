@@ -1,0 +1,17 @@
+<?php
+// Include the SessionManager class
+require_once('SessionManager.php');
+
+// Start the session
+SessionManager::startSession();
+
+// Set a session variable
+SessionManager::setSession('user_id', 123);
+
+// Get a session variable
+$user_id = SessionManager::getSession('user_id');
+echo "User ID: $user_id";
+
+// Destroy the session (logout)
+SessionManager::destroySession();
+?>
